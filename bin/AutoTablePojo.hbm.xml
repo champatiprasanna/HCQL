@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.Hibernate.Table.Pojo.AutoTablePojo" table = "signin">
+      
+      
+      <id name = "id" column = "Id" type = "int" length = "5">
+         <generator class="assigned"/>
+      </id>
+ 
+      <property name = "name" column = "Name" type = "java.lang.String"  length = "20"/>
+      <property name = "email" column = "Email" type = "java.lang.String" length = "60"/>
+      <property name = "password" column = "Password" type = "java.lang.String" length ="60"/>
+      <property name = "age" column = "Age" type  = "int" length = "2" />
+      
+      <property name = "active" type = "boolean">
+      <column name = "isActive" sql-type ="tinyint" not-null = "true"/>
+      </property>
+      <property name = "mobile" column = "Mobile" type  = "int" length = "11" />
+      
+      
+  </class>
+  </hibernate-mapping>
+  
